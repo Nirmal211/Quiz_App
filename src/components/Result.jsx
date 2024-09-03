@@ -12,11 +12,11 @@ const Result = ({ name, score, setScore, setQuestions }) => {
   return (
     <div className="w-full h-full">
       <Header />
-      <p className="pl-6 mt-2 text-sm ">{name}</p>
-      <div className="mt-[40vw] sm:mt-[15vw] w-[100%] text-center ">
-        <h1 className="text-4xl">Final Score : {score}</h1>
+      <p className="pl-6 mt-2 text-md ">{name}</p>
+      <div className="mt-[70%] sm:mt-[15vw] w-[100%] text-center ">
+        <h1 className="text-6xl">Final Score : {score}</h1>
         <button
-          className="py-2.5 px-5 rounded-md mt-5 bg-[#21F10D]/90 text-white font-semibold"
+          className="py-4 px-10 text-2xl rounded-md mt-5 bg-[#21F10D]/90 text-white font-semibold"
           onClick={handleClick}
         >
           Go To HomePage

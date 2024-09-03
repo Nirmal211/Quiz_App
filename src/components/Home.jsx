@@ -49,19 +49,19 @@ const Home = ({
 
   return (
     <div className="w-full">
-      <Header name={name} setName={setName} />
-      <div className="w-[100%] sm:pt-10 flex flex-col-reverse  justify-center items-center md:flex-row md:justify-around md:h-full md:items-start ">
+      <Header />
+      <div className="w-[100%] sm:pt-10 flex flex-col-reverse mt-5 justify-center items-center md:flex-row md:justify-around md:h-full md:items-start ">
         <div className="setting w-[100%] md:w-[45%]">
-          <h1 className="text-4xl font-semibold pt-2 text-center">
+          <h1 className="text-4xl font-semibold pt-5 text-center">
             Quiz Settings
           </h1>
-          <div className="settings  mt-2 px-10 sm:px-0 flex flex-col sm:gap-3 md:pt-5 ">
+          <div className="settings px-10 sm:px-0 flex flex-col gap-5 sm:gap-3 md:pt-5 ">
             {error && <ErrorMessage />}
             <input
               type="text"
               name="Full Name"
               placeholder="Enter Your Name"
-              className="w-full border-2 border-[#21F10D] text-black outline-none mt-5 py-2 md:py-3 md:text-xl pl-3 rounded-sm font-semibold"
+              className="w-full border-2 border-[#21F10D] text-xl text-black outline-none mt-5 py-4 md:py-3 md:text-xl pl-3 rounded-sm font-semibold"
               onChange={(e) => setName(e.target.value)}
               value={name}
               required
@@ -69,7 +69,7 @@ const Home = ({
 
             <select
               name="category"
-              className=" w-full border-2 border-[#21F10D] text-black  mt-5 rounded-sm py-2 md:py-3 md:text-xl pl-3 font-semibold outline-none"
+              className=" w-full border-2 border-[#21F10D] text-xl text-black  mt-5 rounded-sm py-4 md:py-3 md:text-xl pl-3 font-semibold outline-none"
               onChange={(e) => setCategory(e.target.value)}
               value={category}
             >
@@ -85,7 +85,7 @@ const Home = ({
 
             <select
               name="Select Difficulty"
-              className=" w-full border-2 border-[#21F10D] text-black  mt-5 rounded-sm py-2 md:py-3 md:text-xl pl-3 font-semibold outline-none"
+              className=" w-full border-2 border-[#21F10D] text-xl text-black  mt-5 rounded-sm py-4 md:py-3 md:text-xl pl-3 font-semibold outline-none"
               onChange={(e) => setDifficulty(e.target.value)}
               value={difficulty}
             >
@@ -98,7 +98,7 @@ const Home = ({
             </select>
 
             <button
-              className="w-full  bg-black text-[#21F10D] mt-5 py-2 md:py-3 md:text-xl rounded-sm font-semibold"
+              className="w-full  bg-black text-xl text-[#21F10D] mt-5 py-4 md:py-3 md:text-xl rounded-sm font-semibold"
               onClick={handleClick}
             >
               Start Quiz
@@ -106,9 +106,9 @@ const Home = ({
           </div>
         </div>
         <img
-          className=" w-[60%] pt-4 sm:w-[60%] md:w-[40%]"
+          className=" w-[80%] pt-4 sm:w-[60%] md:w-[40%]"
           src="/quiz.svg"
-          alt=""
+          alt="svg"
         />
       </div>
     </div>

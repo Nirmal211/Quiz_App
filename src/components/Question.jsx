@@ -55,11 +55,11 @@ const Question = ({
   return (
     <>
       <div className="w-full h-full px-10">
-        <h1 className="text-2xl font-bold text-center sm:text-3xl">
+        <h1 className="text-4xl mt-10 sm:mt-5 font-bold text-center sm:text-3xl">
           {`Question ${currQuestion + 1}`}
         </h1>
         <div>
-          <h2 className=" pt-2 mb-2 sm:text-2xl sm:mt-5">
+          <h2 className=" pt-8 text-2xl mb-2 sm:text-2xl sm:mt-2">
             {questions[currQuestion]?.question}
           </h2>
           <div
@@ -74,7 +74,7 @@ const Question = ({
                   onClick={() => handleCheck(i)}
                   className={`${
                     selected && handleSelect(i)
-                  } border border-black  mt-2 sm:mt-8 px-2 py-2.5 rounded-sm sm:w-[48%] sm:py-4 sm:text-2xl sm:mb-5"`}
+                  } border border-black  text-2xl mt-4 sm:mt-8 px-2 py-4 rounded-sm sm:w-[48%] sm:py-4 sm:text-2xl sm:mb-5"`}
                   disabled={selected}
                 >
                   {i}
@@ -84,13 +84,13 @@ const Question = ({
           <div className="w-full h-full flex justify-between mt-2 py-3  sm:text-center sm:mt-0 sm:py-8">
             <button
               onClick={handleQuit}
-              className="w-[48%] border border-black py-2 font-semibold sm:py-3 sm:text-2xl rounded-sm hover:bg-slate-400/30"
+              className="w-[48%] border border-black py-4 text-2xl mt-5 font-semibold sm:py-3 sm:text-2xl rounded-sm hover:bg-slate-400/30"
             >
               Quit
             </button>
             <button
               onClick={handleNext}
-              className="w-[48%] border border-black py-2 font-semibold sm:py-3 sm:text-2xl rounded-sm hover:bg-slate-400/30"
+              className="w-[48%] border border-black py-4 text-2xl mt-5 font-semibold sm:py-3 sm:text-2xl rounded-sm hover:bg-slate-400/30"
             >
               {currQuestion === 9 ? "Submit" : "Next Question"}
             </button>

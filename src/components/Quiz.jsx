@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
-import { CirclesWithBar } from "react-loader-spinner";
 import Question from "./Question";
 import { useIcon } from "../hooks/useIcon";
 import { useNavigate } from "react-router";
@@ -31,15 +30,15 @@ const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
     <div className="w-full">
       <Header />
       <div className="w-full h-full flex flex-col justify-center items-center  ">
-        <span className="subTitle border-black border-2 py-2 px-3 my-5 text-xl ">
+        <span className="subTitle border-black border-2 py-4 px-6 my-5 text-2xl ">
           Welcome {name}
         </span>
       </div>
 
       {questions ? (
         <>
-          <div className="w-full px-10 flex flex-col justify-between items-center sm:flex-row">
-            <span className="uppercase">
+          <div className="w-full px-10 flex justify-between items-center text-xl mt-5 sm:flex-row">
+            <span className="uppercase ">
               {questions[currQuestion]?.category}
             </span>
             <span className="uppercase">{`Score : ${score}`}</span>
