@@ -1,4 +1,5 @@
 // import Footer from "./components/Footer";
+import Header from "./components/Header";
 import Home from "./components/Home";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
@@ -26,8 +27,20 @@ const App = () => {
     {
       path: "/",
       element: (
-        <Home name={name} setName={setName} fetchQuestions={fetchQuestions} />
+        <Home
+          name={name}
+          setName={setName}
+          fetchQuestions={fetchQuestions}
+          score={score}
+          setScore={setScore}
+          questions={questions}
+          setQuestions={setQuestions}
+        />
       ),
+    },
+    {
+      path: "/header",
+      element: <Header setScore={setScore} setQuestions={setQuestions} />,
     },
     {
       path: "/quiz",

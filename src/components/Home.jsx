@@ -3,7 +3,15 @@ import Header from "./Header";
 import { useNavigate } from "react-router";
 import ErrorMessage from "./ErrorMessage";
 
-const Home = ({ name, setName, fetchQuestions }) => {
+const Home = ({
+  name,
+  setName,
+  fetchQuestions,
+  score,
+  setScore,
+  questions,
+  setQuestions,
+}) => {
   const [data, setData] = useState([]);
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
@@ -30,6 +38,11 @@ const Home = ({ name, setName, fetchQuestions }) => {
       navigate("/quiz");
     }
   };
+
+  if (questions && score) {
+    setScore(0);
+    setQuestions();
+  }
 
   if (!data.length) return;
   // console.log(data);

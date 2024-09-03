@@ -25,23 +25,11 @@ const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
       ];
       setOptions(handleShuffle(options));
     }
-    const handleRefresh = (event) => {
-      event.preventDefault(); // This line is not strictly necessary for modern browsers
-      navigate("/"); // Redirect to the home page
-    };
-
-    window.addEventListener("beforeunload", handleRefresh);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleRefresh);
-    };
-
-    // navigate("/");
   }, [questions, currQuestion]);
 
   return (
     <div className="w-full">
-      <Header score={score} setScore={setScore} setQuestions={setQuestions} />
+      <Header />
       <div className="w-full h-full flex flex-col justify-center items-center  ">
         <span className="subTitle border-black border-2 py-2 px-3 my-5 text-xl ">
           Welcome {name}
